@@ -1,0 +1,473 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6994079109971440320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0af0a3debef1941a360253c3850194, type: 3}
+  m_Name: Story
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -328, y: -344}
+  ports:
+    keys:
+    - _nextStoryNode2
+    - _nextStoryNode1
+    - _previousStory
+    values:
+    - _fieldName: _nextStoryNode2
+      _node: {fileID: -6994079109971440320}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _nextStoryNode1
+      _node: {fileID: -6994079109971440320}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _previousStory
+      _node: {fileID: -6994079109971440320}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _nextStoryNode2
+        node: {fileID: 3054965006461205704}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _event: {fileID: 11400000, guid: b560f925c6050c44e8e4608f4629d6d7, type: 2}
+  _previousStory: {fileID: 0}
+  _nextStoryNode1: {fileID: 0}
+  _nextStoryNode2: {fileID: 0}
+--- !u!114 &-1352712893385527485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0af0a3debef1941a360253c3850194, type: 3}
+  m_Name: Story
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 744, y: -616}
+  ports:
+    keys:
+    - _nextStoryNode2
+    - _nextStoryNode1
+    - _previousStory
+    values:
+    - _fieldName: _nextStoryNode2
+      _node: {fileID: -1352712893385527485}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _nextStoryNode1
+      _node: {fileID: -1352712893385527485}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _previousStory
+        node: {fileID: 1584092388488513640}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _previousStory
+      _node: {fileID: -1352712893385527485}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _event: {fileID: 11400000, guid: 28d78d05addb45b4bb8e0bf11b043e42, type: 2}
+  _previousStory: {fileID: 0}
+  _nextStoryNode1: {fileID: 0}
+  _nextStoryNode2: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c338fb836cb86184799fdf3df3b01509, type: 3}
+  m_Name: EventNodes
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -1352712893385527485}
+  - {fileID: 1584092388488513640}
+  - {fileID: 2748957213189413882}
+  - {fileID: 3054965006461205704}
+  - {fileID: 8544416197503521434}
+  - {fileID: -6994079109971440320}
+  - {fileID: 6201742360567118780}
+  - {fileID: 6597893382015177668}
+--- !u!114 &1584092388488513640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0af0a3debef1941a360253c3850194, type: 3}
+  m_Name: Story
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 376, y: -616}
+  ports:
+    keys:
+    - _nextStoryNode2
+    - _nextStoryNode1
+    - _previousStory
+    values:
+    - _fieldName: _nextStoryNode2
+      _node: {fileID: 1584092388488513640}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _previousStory
+        node: {fileID: 2748957213189413882}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _nextStoryNode1
+      _node: {fileID: 1584092388488513640}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _previousStory
+        node: {fileID: 3054965006461205704}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _previousStory
+      _node: {fileID: 1584092388488513640}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _nextStoryNode1
+        node: {fileID: -1352712893385527485}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _event: {fileID: 11400000, guid: 4315f22a6da0b204bbdd88a7684c64aa, type: 2}
+  _previousStory: {fileID: 0}
+  _nextStoryNode1: {fileID: 0}
+  _nextStoryNode2: {fileID: 0}
+--- !u!114 &2748957213189413882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0af0a3debef1941a360253c3850194, type: 3}
+  m_Name: Story
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 72, y: -728}
+  ports:
+    keys:
+    - _nextStoryNode2
+    - _nextStoryNode1
+    - _previousStory
+    values:
+    - _fieldName: _nextStoryNode2
+      _node: {fileID: 2748957213189413882}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _previousStory
+        node: {fileID: 6597893382015177668}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _nextStoryNode1
+      _node: {fileID: 2748957213189413882}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _previousStory
+        node: {fileID: 6201742360567118780}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _previousStory
+      _node: {fileID: 2748957213189413882}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _nextStoryNode2
+        node: {fileID: 1584092388488513640}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _event: {fileID: 11400000, guid: fadc64e23984daa4299cae9ea694e605, type: 2}
+  _previousStory: {fileID: 0}
+  _nextStoryNode1: {fileID: 0}
+  _nextStoryNode2: {fileID: 0}
+--- !u!114 &3054965006461205704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0af0a3debef1941a360253c3850194, type: 3}
+  m_Name: Story
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 24, y: -488}
+  ports:
+    keys:
+    - _nextStoryNode2
+    - _nextStoryNode1
+    - _previousStory
+    values:
+    - _fieldName: _nextStoryNode2
+      _node: {fileID: 3054965006461205704}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _previousStory
+        node: {fileID: -6994079109971440320}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _nextStoryNode1
+      _node: {fileID: 3054965006461205704}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _previousStory
+        node: {fileID: 8544416197503521434}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _previousStory
+      _node: {fileID: 3054965006461205704}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _nextStoryNode1
+        node: {fileID: 1584092388488513640}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _event: {fileID: 11400000, guid: dcc1d21c321c48e45af43efca598109d, type: 2}
+  _previousStory: {fileID: 0}
+  _nextStoryNode1: {fileID: 0}
+  _nextStoryNode2: {fileID: 0}
+--- !u!114 &6201742360567118780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0af0a3debef1941a360253c3850194, type: 3}
+  m_Name: Story
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -312, y: -840}
+  ports:
+    keys:
+    - _nextStoryNode2
+    - _nextStoryNode1
+    - _previousStory
+    values:
+    - _fieldName: _nextStoryNode2
+      _node: {fileID: 6201742360567118780}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _nextStoryNode1
+      _node: {fileID: 6201742360567118780}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _previousStory
+      _node: {fileID: 6201742360567118780}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _nextStoryNode1
+        node: {fileID: 2748957213189413882}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _event: {fileID: 11400000, guid: 8c1ee8d3996f295428f79ce68f6a9609, type: 2}
+  _previousStory: {fileID: 0}
+  _nextStoryNode1: {fileID: 0}
+  _nextStoryNode2: {fileID: 0}
+--- !u!114 &6597893382015177668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0af0a3debef1941a360253c3850194, type: 3}
+  m_Name: Story
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -312, y: -664}
+  ports:
+    keys:
+    - _nextStoryNode2
+    - _nextStoryNode1
+    - _previousStory
+    values:
+    - _fieldName: _nextStoryNode2
+      _node: {fileID: 6597893382015177668}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _nextStoryNode1
+      _node: {fileID: 6597893382015177668}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _previousStory
+      _node: {fileID: 6597893382015177668}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _nextStoryNode2
+        node: {fileID: 2748957213189413882}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _event: {fileID: 11400000, guid: 33afb8ef195dbce4c9b6e36f0057aa25, type: 2}
+  _previousStory: {fileID: 0}
+  _nextStoryNode1: {fileID: 0}
+  _nextStoryNode2: {fileID: 0}
+--- !u!114 &8544416197503521434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0af0a3debef1941a360253c3850194, type: 3}
+  m_Name: Story
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -312, y: -520}
+  ports:
+    keys:
+    - _nextStoryNode2
+    - _nextStoryNode1
+    - _previousStory
+    values:
+    - _fieldName: _nextStoryNode2
+      _node: {fileID: 8544416197503521434}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _nextStoryNode1
+      _node: {fileID: 8544416197503521434}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _previousStory
+      _node: {fileID: 8544416197503521434}
+      _typeQualifiedName: StoryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: _nextStoryNode1
+        node: {fileID: 3054965006461205704}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _event: {fileID: 11400000, guid: 269a3e6ce6fa7664faac70352156b08e, type: 2}
+  _previousStory: {fileID: 0}
+  _nextStoryNode1: {fileID: 0}
+  _nextStoryNode2: {fileID: 0}
