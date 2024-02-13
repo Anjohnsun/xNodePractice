@@ -10,6 +10,7 @@ public class StoryNode : Node
     [SerializeField] [Output] public StoryNode _previousStory;
     [SerializeField] [Input] public StoryNode _nextStoryNode1;
     [SerializeField] [Input] public StoryNode _nextStoryNode2;
+    public int _optionID;
     protected override void Init()
     {
         base.Init();

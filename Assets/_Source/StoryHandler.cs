@@ -32,7 +32,7 @@ public class StoryHandler
 
     private void ChooseOption(int i)
     {
-        if (!(i == 1 || i == 2))
+        if (!(i == 1 || i == 2 || i == 3))
             throw new Exception("No such option");
 
         Vector2Int optionGold = _currentNode._event.GoldEffect;
@@ -47,13 +47,14 @@ public class StoryHandler
             _army += optionArmy.x;
             _religion += optionReligion.x;
         }
-        else
+        else if (i == 2)
         {
             _gold += optionGold.y;
             _respect += optionRespect.y;
             _army += optionArmy.y;
             _religion += optionReligion.y;
         }
+
 
         UpdateResourceInfo();
 
@@ -69,11 +70,43 @@ public class StoryHandler
         {
             if (i == 1)
             {
+                _currentNode.GetInputValue<StoryNode>("_nextStoryNode1")._previousStory = _currentNode;
                 _currentNode = _currentNode.GetInputValue<StoryNode>("_nextStoryNode1");
+                _currentNode._optionID = 1;
+            }
+            else if (i == 2)
+            {
+                _currentNode.GetInputValue<StoryNode>("_nextStoryNode2")._previousStory = _currentNode;
+                _currentNode = _currentNode.GetInputValue<StoryNode>("_nextStoryNode2");
+                _currentNode._optionID = 2;
             }
             else
             {
-                _currentNode = _currentNode.GetInputValue<StoryNode>("_nextStoryNode2");
+                if (_currentNode._previousStory != null)
+                {
+                    optionGold = _currentNode._previousStory._event.GoldEffect;
+                    optionRespect = _currentNode._previousStory._event.RespectEffect;
+                    optionArmy = _currentNode._previousStory._event.ArmyEffect;
+                    optionReligion = _currentNode._previousStory._event.ReligionEffect;
+
+                    if (_currentNode._optionID == 1)
+                    {
+                        _gold -= optionGold.x;
+                        _respect -= optionRespect.x;
+                        _army -= optionArmy.x;
+                        _religion -= optionReligion.x;
+                    }
+                    else if (_currentNode._optionID == 2)
+                    {
+                        _gold -= optionGold.y;
+                        _respect -= optionRespect.y;
+                        _army -= optionArmy.y;
+                        _religion -= optionReligion.y;
+                    }
+
+                    _currentNode = _currentNode._previousStory;
+                    UpdateResourceInfo();
+                }
             }
 
             LoadNodeInfo();
@@ -88,6 +121,11 @@ public class StoryHandler
     private void UpdateResourceInfo()
     {
         _vIsualUpdater.UpdateResourceInfo(_gold.ToString(), _respect.ToString(), _army.ToString(), _religion.ToString());
+    }
+
+    public void PreviousNodeOption()
+    {
+        ChooseOption(3);
     }
 }
 

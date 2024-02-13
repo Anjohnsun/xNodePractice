@@ -10,6 +10,7 @@ public class Bootstrapper : MonoBehaviour
 
     [SerializeField] private Button _option1Button;
     [SerializeField] private Button _option2Button;
+    [SerializeField] private Button _option3Button;
 
     private StoryHandler _storyHandler;
     void Start()
@@ -21,11 +22,13 @@ public class Bootstrapper : MonoBehaviour
     {
         _option1Button.onClick.RemoveAllListeners();
         _option2Button.onClick.RemoveAllListeners();
+        _option3Button.onClick.RemoveAllListeners();
 
         _storyHandler = new StoryHandler(_startNode, _vIsualUpdater, 5);
         _vIsualUpdater.ShowEndPanel(false);
 
         _option1Button.onClick.AddListener(_storyHandler.Option1);
         _option2Button.onClick.AddListener(_storyHandler.Option2);
+        _option3Button.onClick.AddListener(_storyHandler.PreviousNodeOption);
     }
 }
